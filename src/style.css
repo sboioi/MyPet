@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Sulphur+Point&display=swap');
+
+body{
+    font-family: 'Comfortaa', cursive;
+    max-height: 95vh;
+}
+body:hover{
+    cursor: context-menu;
+}
+
+h2{
+    text-align: center;
+    font-size: xx-large;
+}
+
+/* all the lists */
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    text-align: center
+}
+li:hover{
+    color: rgb(0, 128, 96);
+}
+ul, li{
+    padding:0;
+    word-break: break-all;
+}
+.app, .pet{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.app ul , .pet ul, .petSubMenu ul{
+    list-style: none;
+}
+.app li, .pet li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    height: 70vh;
+    margin:0;
+    padding:0;
+    transition-duration: 0.3s;
+}
+.app li{
+    height: 80vh;
+}
+.app li:hover, .pet ul{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.petSubMenu ul{
+    margin:0;
+}
+.petSubMenu li{
+    height: 20vh;
+    font-size: 1rem;
+}
+.pet li:hover{
+    color:black;
+}
+.pet li:last-child{
+    background-color: black;
+}
+.petSubMenu li:hover{
+    color: rgb(0, 128, 96);
+    cursor: pointer;
+}
+.randomList li:hover, .searchList li:hover{
+    cursor: pointer;
+    color: rgb(0, 128, 96);
+    transition-duration: 0.3s;
+}
+.searchList li{
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(19, 78, 62);
+    transition-duration: 0.3s;
+}
+/*chosen pet*/
+.chosenPet{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: lightyellow;
+    font-size: larger;
+    margin: auto;
+    max-width: 80%;
+}
+.chosenPet li{
+    color: black;
+    margin-top: 0.5rem;
+    word-break: break-all;
+    transition-duration: 0.3s;
+    line-height: 1.2;
+
+}
+.ownerInfo li{
+    margin-top: 0;
+    margin-top: 0.5rem;
+}
+.loading{
+    text-align: center;
+    color: rgb(0,128,96)
+}
+
+/* all buttons */
+button, input[type=submit] {
+    background-color:rgb(0, 128, 96);
+    color: white;
+    margin: 1rem 0.5rem 0 0;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border: none;
+    transition-duration: 0.3s;
+    font-family: 'Sulphur Point', sans-serif;
+}
+
+button:hover, input[type=submit]:hover {
+    background-color: orange;
+    cursor: pointer
+}
+
+button:active {
+    background-color: black;
+}
+.button{
+    display: flex;
+    flex-direction:column;
+}
+
+/* form area*/
+form{
+    max-width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.5;
+}
+textarea{
+    background-color: white;
+    resize: none;
+    border:none;
+}
+
+/*error messages list*/
+.error{
+    color: red;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+    font-size: small;
+}
+.error li:hover{
+    color:red;
+}
+.chooseOwnerType{
+    margin:auto;
+    text-align: center;
+    line-height: 2rem;
+    background-color: lightyellow;
+    max-width: 80%;
+    padding: 2rem 0;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color: rgb(0, 128, 96);
+}
+
+@media screen and (min-width:800px) {
+    body{
+        font-size: x-large;
+    }
+    .app ul, .pet ul{
+        display:flex;
+        flex-direction: column;
+    }
+    .app li, .pet li{
+        font-size: 10rem;
+      
+    }
+    .petSubMenu li{
+        max-height: 22vh;
+        font-size: 3rem;
+    }
+    button{
+        
+        padding: 0.5rem 0.5rem;
+    }
+    form{
+        max-width: 60%;
+    }
+    .button{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    .randomList, .searchList{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content:center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .randomList li, .searchList li{
+        margin-left: 2rem;
+    }
+    .randomList li:first-child, .searchList li:first-child{
+        margin-left: 0;
+    }
+    .chosenPet li{
+        line-height: 2;
+    }
+    .ownerInfo{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    }
+    .ownerInfo li{
+        margin-left: 1.2rem;
+    }
+    .error{
+        font-size: medium;
+    }
+
+}
